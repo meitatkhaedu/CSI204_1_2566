@@ -17,6 +17,8 @@ pipeline {
         }
         stage('Build') {
             steps {
+		sh 'docker --version'
+                sh 'docker info'
                 print "Docker Build Image"
 		sh '/usr/local/bin/docker build -t csi204-html .'
 
