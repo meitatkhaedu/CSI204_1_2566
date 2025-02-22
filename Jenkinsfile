@@ -18,10 +18,10 @@ pipeline {
         stage('Build') {
             steps {
                 print "Docker Build Image"
-		sh 'docker build -t csi204-html .'
+		sh '/usr/local/bin/docker build -t csi204-html .'
 
 		print "Docker Run Container"
-		sh 'docker run -d -p 44510:44513'
+		sh '/usr/local/bin/docker run -d -p 44510:44513'
             }
         }
         stage('Test') {
