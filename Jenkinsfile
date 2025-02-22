@@ -21,7 +21,7 @@ pipeline {
 		sh '/usr/local/bin/docker build -t csi204-html .'
 
 		print "Docker Run Container"
-		sh '/usr/local/bin/docker run -d -p 44510:44513'
+		sh '/usr/local/bin/docker run -d -p 44510:44513 csi204-html'
             }
         }
         stage('Test') {
