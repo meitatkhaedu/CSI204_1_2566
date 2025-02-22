@@ -18,6 +18,8 @@ pipeline {
         stage('Build') {
             steps {
                 print "Hello Build"
+		sh 'docker build -t csi204-html'
+		sh 'docker run -d -p 44510:44513
             }
         }
         stage('Test') {
